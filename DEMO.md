@@ -3,7 +3,7 @@
 ## 🎭 Context
 You will present using the **RewindDB Frontend Dashboard**. 
 * **If Offline/Local:** Go to `http://localhost:5500`
-* **If Online/Pinggy:** Go to your Vercel URL and configure the Pinggy Tunnel in the ⚙️ Settings.
+* **If Online/Serveo:** Go to your Vercel URL and the built-in Serveo URL will connect completely automatically without manually pasting anything!
 
 ---
 

@@ -648,7 +648,6 @@ setApi(API); // sync display on load
 async function apiCall(method, path, body) {
   const opts = { method, headers: { 
     'Content-Type': 'application/json',
-    'X-Pinggy-No-Screen': 'true',
     'ngrok-skip-browser-warning': 'true'
   } };
   if (body !== undefined && body !== null) opts.body = JSON.stringify(body);

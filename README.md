@@ -62,7 +62,7 @@ graph TD
 During the hackathon presentation, we run a hybrid local-cloud architecture:
 *   The **Frontend Dashboard** is continuously deployed on Vercel.
 *   The **Backend Engine** runs securely on a local machine to eliminate latency during chaos tests.
-*   They are connected securely via a **Pinggy** HTTPS tunnel.
+*   They are connected securely via a **Serveo** HTTPS tunnel.
 
 ### How to Run Locally for Judges:
 
@@ -74,16 +74,15 @@ During the hackathon presentation, we run a hybrid local-cloud architecture:
    ```
    *This starts EventStoreDB on port `2113` and FastAPI on port `8001`.*
 
-2. **Expose the Engine via Pinggy**
-   In a new terminal window, start a reverse tunnel to securely expose your backend to Vercel:
+2. **Expose the Engine via Serveo**  
+   Open a **new terminal tab** and establish a secure tunnel to expose the backend:
    ```bash
-   ssh -p 443 -R0:localhost:8001 a.pinggy.io
+   ssh -o StrictHostKeyChecking=no -R 80:localhost:8001 serveo.net
    ```
-
-3. **Connect the Vercel App**
+   - Paste the `https://....serveousercontent.com` URL provided by the terminal command above.
    - Open your deployed frontend: `https://rewind-db.vercel.app` *(Recommendation: Use an Incognito Window to ensure you bypass caching).*
    - Click the **Gear ⚙️ Icon** to open the Settings modal.
-   - Paste the `https://....run.pinggy-free.link` URL provided by the terminal command above.
+   - Paste the URL provided by the terminal command above.
    - Click **Save & Reconnect**. The offline dot will turn Green.
 
 ---
